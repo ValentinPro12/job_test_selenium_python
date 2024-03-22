@@ -90,3 +90,8 @@ failures
 tests/build
 tests/qaseio.lock
 
+.pytest_cache
+.idea
+*.iml
+report
+allure-results
