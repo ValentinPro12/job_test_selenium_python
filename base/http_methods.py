@@ -5,6 +5,7 @@ from requests import Response
 
 """ Список HTTP методов"""
 
+
 class Http_methods:
     cookie = ''
 
