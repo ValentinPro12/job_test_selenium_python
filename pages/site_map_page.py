@@ -3,6 +3,7 @@ import requests
 from base.base_page import BasePage
 from config.links import Links
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 from base.http_methods import Http_methods
 from helpers import expect_equal
 
@@ -31,9 +32,13 @@ class SiteMapPage(BasePage):
 
     def click_link(self):
         self.wait.until(EC.element_to_be_clickable(self.LINK_SITEMAP_STAT_COMMON)).click()
-        # self.wait.until(EC.text_to_be_present_in_element(self.BREADCRUMB_TITLE,'Для отображения данных задайте необходимые параметры и нажмите кнопку "Обновить".'))
-        var = self.wait.until(EC.title_is('sc240314_0000_testing_prohorov_2920 \ Статистики \ Общая статистика'))
-        print(var)
+        element =  self.wait.until(EC.presence_of_element_located(self.BREADCRUMB_TITLE))
+
+        # Получение текста элемента
+        text = element.text
+        print(text)
+
+
         current_url = self.driver.current_url
         response = Http_methods.get(current_url)
         assert response.status_code == 200, f"Expected status code 200, but got {response.status_code} for URL {current_url}"
