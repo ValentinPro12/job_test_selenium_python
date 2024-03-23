@@ -41,7 +41,9 @@ class SiteMapPage(BasePage):
 
         current_url = self.driver.current_url
         response = Http_methods.get(current_url)
-        assert response.status_code == 200, f"Expected status code 200, but got {response.status_code} for URL {current_url}"
+        expect_equal(check_name="Код ответа сервера", actual_value=response.status_code,
+                         expected_value=200, url=current_url)
+        # assert response.status_code == 200, f"Expected status code 200, but got {response.status_code} for URL {current_url}"
 
         # self.wait.until(EC.element_to_be_clickable(self.LINK_HOME)).click()
         # current_url = self.driver.current_url
