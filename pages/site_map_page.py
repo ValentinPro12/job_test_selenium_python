@@ -8,6 +8,12 @@ from helpers import expect_equal
 
 
 class SiteMapPage(BasePage):
+    """
+       Класс SiteMapPage, отвечает за то что
+       бы полностью пройти все пункты меню на указанной странице.
+       имеет  методы click_link
+       информирует о status_code, current_url, element_text
+       """
     PAGE_URL = Links.SITE_MAP_LINK
 
     LINK_SITEMAP_COMMON = ('xpath', '//a[@id="link_sitemap_stat_common"]')

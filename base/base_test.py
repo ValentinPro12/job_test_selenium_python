@@ -5,6 +5,10 @@ from pages.site_map_page import SiteMapPage
 
 
 class BaseTest:
+    """
+    Класс для мельти-страница
+    имеет метод setup является fixture
+    """
     data: Data
     login_page: LoginPage
     site_map_page: SiteMapPage
