@@ -8,4 +8,4 @@ class TestPage(BaseTest):
         self.login_page.enter_password(self.data.PASSWORD)
         self.login_page.click_reg_input()
         self.site_map_page.is_opened()
-        self.site_map_page.click_link()
+        self.site_map_page.click_all_links()
