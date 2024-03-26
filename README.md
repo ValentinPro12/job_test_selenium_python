@@ -9,7 +9,10 @@
 sudo apt install python3.10-venv 
 sudo apt install python-pip 
 3. Установить виртуальное окружение в корневой директории проекта командой python3 -m venv venv
-4. Установка зависемостей pip install -r requarements.txt
+
+5. source .venv/bin/activate
+
+6. Установка зависемостей pip install -r requarements.txt
 
 
 
@@ -27,5 +30,4 @@ sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
 
 
 
-Если в терминале пояпилась надпись (.venv) виртуальное окружение активно , можно устанавливать зависимости и пакеты
-3. 
+
