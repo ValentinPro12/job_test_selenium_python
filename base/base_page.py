@@ -1,3 +1,5 @@
+import allure
+
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -15,10 +17,12 @@ class BasePage:
         """
         Открытие страници
         """
-        self.driver.get(self.PAGE_URL)
+        with allure.step(f'Открытие {self.PAGE_URL}'):
+            self.driver.get(self.PAGE_URL)
 
     def is_opened(self) -> None:
         """
         Проверка что страница открыта
         """
-        self.wait.until(EC.url_to_be(self.PAGE_URL))
+        with allure.step(f'Страница {self.PAGE_URL} открылась'):
+            self.wait.until(EC.url_to_be(self.PAGE_URL))
