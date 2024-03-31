@@ -15,12 +15,7 @@ class TestPage(BaseTest):
         self.site_map_page.is_opened()
         self.site_map_page.cek()
         self.site_map_page.cek_text()
-
-    # def test_config_main(self):
-    #     self.login_page.open()
-    #     self.login_page.enter_login(self.data.LOGIN)
-    #     self.login_page.enter_password(self.data.PASSWORD)
-    #     self.login_page.click_reg_input()
-    #     self.site_map_page.is_opened()
-    #     self.main_page.open()
-    #     self.main_page.cek()
+        self.site_map_page.click_settings_link()
+        self.main_page.foo()
+        # self.site_map_page.click_sitemap_config_survey()
+        # self.survey_page.foo()
