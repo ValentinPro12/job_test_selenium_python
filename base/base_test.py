@@ -2,8 +2,8 @@ import pytest
 from config.data import Data
 from outbound.pages.config.main_page import MainPage
 from outbound.pages.config.survey_page import Survey
-from pages.login_page import LoginPage
-from pages.site_map_page import SiteMapPage
+from outbound.pages.login_page import LoginPage
+from outbound.pages.site_map_page import SiteMapPage
 
 
 class BaseTest:

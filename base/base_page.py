@@ -1,6 +1,3 @@
-import os
-import time
-
 import allure
 
 from selenium.webdriver.support.ui import WebDriverWait
@@ -35,8 +32,9 @@ class BasePage:
         with allure.step(f'Страница {self.PAGE_URL} открылась'):
             self.wait.until(EC.url_to_be(self.PAGE_URL))
 
-    def cek(self):
+    def check_usr_status(self):
         current_url = self.driver.current_url
         response = Http_methods.get(current_url)
+        print(self.PAGE_URL)
         expect_equal(check_name="Код ответа сервера", actual_value=response.status_code, actual_value_url=self.PAGE_URL,
                      expected_value=200, url=current_url)

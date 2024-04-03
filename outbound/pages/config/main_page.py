@@ -13,19 +13,14 @@ class MainPage(BasePage):
     breadcrumb_title = ('xpath', '//span[@id="breadcrumb_title"]')
     notifications = ('xpath', '//td[@class="notifications-text-td"]')
 
-
-    # TODO надо подумать как улучшить данный код
-    def foo(self):
+    def check(self):
         print('MainPage')
-        super().cek()
-        self.cek_text()
-        pass
+        super().check_usr_status()
+        self.check_text()
 
-    def cek_text(self):
-        # breadcrumb_text = self.wait.until(EC.presence_of_element_located(self.breadcrumb_title)).text
-        # assert self.MAIN_TITLE == breadcrumb_text, (f"Название '{breadcrumb_text}' "
-        #                                             f"не соответствует ожидаемому заголовку '{self.MAIN_TITLE}'")
-        print('sssss')
-
+    def check_text(self):
+        breadcrumb_text = self.wait.until(EC.presence_of_element_located(self.breadcrumb_title)).text
+        assert self.MAIN_TITLE == breadcrumb_text, (f"Название '{breadcrumb_text}' "
+                                                    f"не соответствует ожидаемому заголовку '{self.MAIN_TITLE}'")
         self.wait.until(EC.element_to_be_clickable(self.link_to_home)).click()
-        print('3333')
+

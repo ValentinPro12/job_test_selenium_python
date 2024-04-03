@@ -41,5 +41,5 @@ class SiteMapPage(BasePage):
     def click_settings_link(self):
         self.wait.until(EC.element_to_be_clickable(self.link_sitemap_config_main)).click()
 
-    def click_sitemap_config_survey(self):
+    def click_sitemap_config_survey(self) -> None:
         self.wait.until(EC.element_to_be_clickable(self.link_sitemap_config_survey)).click()
