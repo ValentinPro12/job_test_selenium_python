@@ -43,3 +43,4 @@ class BasePage:
         do = 1111
         v= 111
         e= 11
+        r=3
