@@ -41,5 +41,6 @@ class BasePage:
 
     def new_fanc(self):
         do = 1111
+        f=1
         v= 111
         e= 11
