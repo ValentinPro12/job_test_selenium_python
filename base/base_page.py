@@ -38,3 +38,6 @@ class BasePage:
         print(self.PAGE_URL)
         expect_equal(check_name="Код ответа сервера", actual_value=response.status_code, actual_value_url=self.PAGE_URL,
                      expected_value=200, url=current_url)
+
+    def new_fanc(self):
+        do = 1111
